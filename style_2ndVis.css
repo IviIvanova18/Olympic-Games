@@ -1,0 +1,80 @@
+/* Simple styling to arrange the SVGs side by side */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+}
+#main, #map-container {
+    margin: 10px;
+}
+
+#map-container {
+    position: relative;
+    
+    flex: 1;
+}
+
+
+#button-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Additional styling as needed */
+}
+#controlButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.hajar-button {
+    background-color: #417a95; 
+    color: #fff;
+    border: none; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    transition-duration: 0.4s; 
+    cursor: pointer; 
+    border-radius: 25px; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Hover Effect for Hajar Button */
+.hajar-button:hover {
+    background-color: #69ffad; /* A slightly darker shade on hover */
+    color: black; /* Black text on hover */
+}
+
+.row {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .col {
+    flex: 1; 
+    text-align: center; 
+    padding: 1px; 
+    width: 25px;
+    height: 50px;
+  }
+  .country-input {
+    padding: 5px;
+    width: 120px;
+    background-color: #374151; 
+    color: white; 
+    border: none; 
+    border-radius: 4px;
+  }
+  .header {
+    font-weight: bold;
+  }

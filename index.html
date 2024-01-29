@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Olympic Games</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- D3.js for Data-Driven Documents -->
+  <script type="text/javascript" src="js/d3.v7.min.js"></script>
+  <script type="text/javascript" src="js/firstVis.js"></script>
+  <script type="text/javascript" src="js/secondVis.js"></script>
+  <script type="text/javascript" src="js/thirdVis.js"></script>
+  <link rel="stylesheet" href="style_2ndVis.css">
+  
+
+</head>
+
+<body class="bg-gray-800 text-gray-200 font-sans" onload="createViz()">
+  <div class="container mx-auto px-8 py-8">
+    <div class="text-center mb-10">
+      <h1 class="text-5xl font-extrabold text-indigo-300 mb-6">
+        Exploring the Olympic Games
+      </h1>
+      <p class="text-xl text-indigo-200 mb-16">
+        Delve into the rich history of the Olympic Games. Discover patterns,
+        trends, and stories through interactive data visualizations.
+      </p>
+    </div>
+    <h2 class="text-3xl font-bold text-indigo-300 mb-4">
+      Visualization 1: Medal Summary by Country
+    </h2>
+    <p class="text-lg text-indigo-200 mb-6">
+      Explore the total number of medals won by each country in the Olympic
+      Games, spanning from 1896 to 2022. Gain insights into the dominant
+      sporting nations and their historic achievements. By clicking on the rings, you can zoom in on the respective
+      continent.
+      You can also select a specific edition of the games using the timeline below or a certain medal type (gold,
+      silver, bronze).
+    </p>
+    <div class="bg-gray-700 px-12 py-8 rounded-lg shadow-lg">
+      <div class="flex flex-wrap md:flex-nowrap">
+        <div class="flex-grow flex flex-col items-center justify-center">
+          <div id="rings" class="text-sm mb-4"></div>
+          <div id="results" class="text-sm w-full justify-content:center text-align:center">
+          </div>
+          <div id="medalTypes" class="w-full text-xs mt-4 md:mt-0"></div>
+        </div>
+        <div class="flex flex-col">
+          <div id="map" class="h-full border-2 border-gray-600 rounded-lg shadow-lg"></div>
+          <div id="timelineContainer" class="w-full text-xs mt-4 md:mt-0"></div>
+        </div>
+      </div>
+    </div>
+    <p class="text-lg text-indigo-200 my-6">
+      Using the interactive drop-down menu you can chose the game season and the desired sport event within. The medal
+      count for the selected
+      sports will be represented on the map.
+    </p>
+    <div id="dropDown" class="w-full bg-gray-700 p-3 rounded-lg shadow-lg"></div>
+
+    <h2 class="text-3xl font-bold text-indigo-300 mt-6 mb-4">Visualization 2: Women in Olympics</h2>
+    <p class="text-lg text-indigo-200 mb-6">
+      Explore the total number of medals won by each country in the Olympic
+      Games, spanning from 1896 to 2022. Gain insights into the dominant
+      sporting nations and their historic achievements.
+    </p>
+    
+    <div id="container">
+      
+      <div id="main">
+          <!-- Line chart SVG will be appended here -->
+      </div>
+      <div id="map-container">
+          <!-- Map SVG will be appended here -->
+          <div id="button-container">
+            <button  class="hajar-button" id="startButton">Start</button>
+            <!-- <button  class="hajar-button"  id="pauseButton">Pause</button> -->
+            <!-- <button   class="hajar-button" id="restartButton">Restart</button> -->
+        </div>
+      </div>
+      
+    </div> 
+    
+   
+
+
+    <h2 class="text-3xl font-bold text-indigo-300 mt-6 mb-4">Visualization 3: Sport popularity</h2>
+    <p class="text-lg text-indigo-200 mb-12">
+      The graphic below shows 10 most popular disciplines of each Summer Olympic since 1896. The popularity is measured
+      by the total number of athletes participated in each discipline.
+    </p>
+    <div id="chart-container" class="w-full bg-gray-700 p-3 rounded-lg shadow-lg"></div>
+    <div class="text-xs text-center text-gray-400 my-12">
+      <p>
+        Data is collected from official Olympic records and represented here
+        to show trends and insights.
+      </p>
+      <p>
+        Click on the rings to view details about each region, and use the
+        selection tool to filter by sport.
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

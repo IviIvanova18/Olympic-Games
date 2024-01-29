@@ -1,0 +1,47 @@
+ body {
+     background-color: light-gray;
+     margin: 0;
+     padding: 0;
+ }
+
+ #timeLine {
+     font-size: 10px;
+ }
+
+ .olympic-medals {
+     font-size: 8px;
+ }
+
+ div.tooltip {
+     position: absolute;
+     text-align: left;
+     padding: 2px;
+     font: 10px;
+     background: lightsteelblue;
+     border: 0px;
+     border-radius: 8px;
+     pointer-events: none;
+ }
+
+ .grid-container {
+     display: grid;
+     grid-template-columns: auto auto auto auto;
+     grid-gap: 1px;
+     padding: 1px;
+ }
+
+ #map {
+     grid-area: 2 / 1 / span 2 / span 2;
+ }
+
+ #rings {
+     grid-area: 1/ 1 / span 1 / span 2;
+ }
+
+ #dropDown {
+     grid-area: 1/3 / span 4 / span 1;
+ }
+
+ #timelineContainer {
+     grid-area: 4/1 / span 1 / span 2;
+ }
